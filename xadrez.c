@@ -1,32 +1,104 @@
 #include <stdio.h>
 
-// Desafio de Xadrez - MateCheck
-// Este código inicial serve como base para o desenvolvimento do sistema de movimentação das peças de xadrez.
-// O objetivo é utilizar estruturas de repetição e funções para determinar os limites de movimentação dentro do jogo.
-
 int main() {
-    // Nível Novato - Movimentação das Peças
-    // Sugestão: Declare variáveis constantes para representar o número de casas que cada peça pode se mover.
 
-    // Implementação de Movimentação do Bispo
-    // Sugestão: Utilize uma estrutura de repetição para simular a movimentação do Bispo em diagonal.
+    int dir, passos;
 
-    // Implementação de Movimentação da Torre
-    // Sugestão: Utilize uma estrutura de repetição para simular a movimentação da Torre para a direita.
+    printf("===Torre===\n");
+    printf("Escolha a direção da Torrre:\n");
+    printf("1) Direta 2) Esquerda 3) Cima 4) Baixo\n ");
+    printf("Opção: ");
+    scanf("%d", &dir);
 
-    // Implementação de Movimentação da Rainha
-    // Sugestão: Utilize uma estrutura de repetição para simular a movimentação da Rainha para a esquerda.
+    printf("Quantos passos? ");
+    scanf("%d", &passos);
 
-    // Nível Aventureiro - Movimentação do Cavalo
-    // Sugestão: Utilize loops aninhados para simular a movimentação do Cavalo em L.
-    // Um loop pode representar a movimentação horizontal e outro vertical.
+    printf("\nMovimento da Torre:\n");
+    for(int i = 0; i < passos; i++) {
+        switch (dir) {
+            case 1: printf("Direita\n");
+            break;
+            case 2: printf("Esquerda\n");
+            break;
+            case 3: printf("Cima\n");
+            break;
+            case 4: printf("Baixo\n");
+            break;
 
-    // Nível Mestre - Funções Recursivas e Loops Aninhados
-    // Sugestão: Substitua as movimentações das peças por funções recursivas.
-    // Exemplo: Crie uma função recursiva para o movimento do Bispo.
+            defaut:printf("Direção invalida\n"); i = passos; break;
+        }
+    }
 
-    // Sugestão: Implemente a movimentação do Cavalo utilizando loops com variáveis múltiplas e condições avançadas.
-    // Inclua o uso de continue e break dentro dos loops.
+    printf ("\n");
+
+    printf("=== Bispo ===\n");
+    printf("Escolha a diagonal do Bispo:\n");
+    printf("1) Cima Direita 2) Cima Esquerda 3) Baixo Direita 4) Baixo Esquerda\n");
+    printf("Opção: ");
+    scanf("%d", &dir);
+
+    printf("Quantos passos? ");
+    scanf("%d", &passos);
+
+    printf("\nMovimento do Bispo:\n");
+    int j = 0;
+    if (passos <= 0) {
+        printf("Nada a mover.\n");
+    } else {
+        do {
+            switch (dir){
+                case 1: printf("Cima Direita\n");
+                break;
+                case 2: printf("Cima Esquerda\n");
+                break;
+                case 3: printf("Baixo Direita\n");
+                break;
+                case 4: printf("Baixo Esquerda\n");
+                break;
+                default:printf("Direção invalida\n");
+                j = passos; break;
+
+            }
+            j++;
+        } while (j < passos);
+        printf("\n");
+    }
+     printf("=== Rainha ===\n");
+     printf("Escolha a direção da Rainha: \n");
+     printf("1) Direita 2) Esquerda 3) Cima 4) Baixo\n");
+     printf("5) Cima Direita 6) Cima Esquerda 7)Baixo Direita 8)Baixo Esquerda\n");
+     printf("Opção: ");
+     scanf("%d", &dir);
+
+     printf("Quantos passos? ");
+     scanf("%d", &passos);
+
+     printf("\nMovimento da Rainha:\n");
+     int k = 0;
+     while (k < passos) {
+        switch (dir) {
+        case 1: printf ("Direita\n");
+        break;
+        case 2: printf("Esquerda\n");
+        break;
+        case 3: printf("Cima\n");
+        break;
+        case 4 : printf("Baixo\n");
+        break;
+        case 5: printf("Cima Direita\n");
+        break;
+        case 6: printf("Cima Esquerda\n");
+        break;
+        case 7: printf("Baixo Direita\n");
+        break;
+        case 8: printf("Baixo Esquerda\n");
+        break;
+        default: printf("Direção invalida");
+        k = passos; break;
+        }
+        k++; 
+    }
+     printf("\n");
 
     return 0;
 }
