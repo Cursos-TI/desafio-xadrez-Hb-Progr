@@ -100,5 +100,71 @@ int main() {
     }
      printf("\n");
 
+     printf("=== Cavalo ===\n");
+     printf("Escolha o movimento do Cavalo em L: \n");
+     printf("1) 2 Baixo + 1 Esquerda\n");
+     printf("2) 2 Baixo + 1 Direita\n");
+     printf("3) 2 Cima + 1 Esquerda\n");
+     printf("4) 2 Cima + 1 Direita\n");
+     printf("Opção: ");
+     scanf("%d", &dir);
+
+     printf("\nMovimentação do Cavalo:\n");
+
+     switch(dir) {
+        case 1:
+        for(int i = 0; i < 2; i++) {
+            printf("Baixo\n");
+        }
+        {
+            int j = 0;
+            while(j < 1) {
+                printf("Esquerda\n");
+                j++;
+            }
+          }
+          break;
+          case 2:
+          for(int i = 0; i < 2; i++) {
+            printf("Baixo\n");
+          }
+          {
+             int j = 0;
+             while(j < 1) {
+                printf("Direita\n");
+                j++;
+             }
+          }
+          break;
+          case 3:
+          for(int i = 0; i < 2; i++) {
+            printf("Cima\n");
+          }
+          {
+            int j = 0;
+            while(j < 1) {
+                printf("Esquerda\n");
+                j++;
+            }
+          }
+          break;
+          case 4:
+          for(int i = 0; i < 2; i++) {
+            printf("Cima\n");
+          }
+          {
+            int j = 0;
+            while(j < 1){
+                printf("Direta\n");
+                j++;
+            }
+          }
+          break;
+          default:
+          printf("Movimento inválido!\n");
+          
+          }
+          printf("\n");
+
     return 0;
 }
